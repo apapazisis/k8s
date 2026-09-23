@@ -19,5 +19,6 @@ terraform {
 module "main" {
   source = "../../main"
 
-  vpc_cidr_block = "10.0.0.0/16"
+  vpc_cidr_block   = "10.0.0.0/16"
+  eks_cluster_name = "eks-cluster"
 }
