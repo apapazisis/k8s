@@ -1,2 +1,2 @@
-# k8s-akhi
+# k8s
 Learning k8s
