@@ -37,6 +37,18 @@ jobs:
         with:
           terraform_wrapper: false
 
+      - name: Terraform Format Check
+        run: terraform fmt -check -recursive
+
+      - name: Terraform Init
+        run: terraform init -input=false
+
+      - name: Terraform Validate
+        run: terraform validate
+
+      - name: Terraform Plan
+        run: terraform plan -input=false -no-color -out=tfplan
+
   apply:
     runs-on: ubuntu-latest
     needs: plan
