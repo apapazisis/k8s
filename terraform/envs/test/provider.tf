@@ -3,7 +3,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      repository = "aws-eks"
+      repository = "k8s"
     }
   }
 }
