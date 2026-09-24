@@ -27,7 +27,7 @@ module "cluster" {
   source = "../../cluster"
 
   eks_cluster_name = "eks-cluster"
-  subnet_ids       = [
+  subnet_ids = [
     module.network.private_subnet_a_id,
     module.network.private_subnet_b_id,
     module.network.private_subnet_c_id
