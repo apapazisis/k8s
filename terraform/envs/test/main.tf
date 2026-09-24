@@ -33,3 +33,11 @@ module "cluster" {
     module.network.private_subnet_c_id
   ]
 }
+
+module "k8s_services" {
+  source = "../../k8s-services"
+
+  cluster_name          = module.cluster.cluster_name
+  vpc_id                = module.network.vpc_id
+  cluster_oidc_endpoint = module.cluster.cluster_oidc_endpoint
+}

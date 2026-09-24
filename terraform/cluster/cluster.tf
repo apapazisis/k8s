@@ -25,7 +25,7 @@ resource "aws_cloudwatch_log_group" "eks_log_group" {
 }
 
 resource "aws_eks_cluster" "main" {
-  name                          = var.eks_cluster_name
+  name                          = "eks-cluster"
   version                       = "1.36"
   role_arn                      = aws_iam_role.eks_cluster.arn
   bootstrap_self_managed_addons = true
