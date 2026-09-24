@@ -23,7 +23,7 @@ data "aws_eks_addon_version" "eks_pod_identity_agent" {
 }
 
 data "aws_iam_openid_connect_provider" "eks" {
-  url = aws_eks_cluster.cluster.identity[0].oidc[0].issuer
+  url = aws_eks_cluster.main.identity[0].oidc[0].issuer
 }
 
 
