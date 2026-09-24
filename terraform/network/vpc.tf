@@ -25,9 +25,8 @@ resource "aws_subnet" "public_a" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name                                            = "k8s-public-a"
-    "kubernetes.io/role/elb"                        = "1"
-    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+    Name                     = "k8s-public-a"
+    "kubernetes.io/role/elb" = "1"
   }
 }
 
@@ -38,9 +37,8 @@ resource "aws_subnet" "public_b" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name                                            = "k8s-public-b"
-    "kubernetes.io/role/elb"                        = "1"
-    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+    Name                     = "k8s-public-b"
+    "kubernetes.io/role/elb" = "1"
   }
 }
 
@@ -51,9 +49,8 @@ resource "aws_subnet" "public_c" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name                                            = "k8s-public-c"
-    "kubernetes.io/role/elb"                        = "1"
-    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+    Name                     = "k8s-public-c"
+    "kubernetes.io/role/elb" = "1"
   }
 }
 
@@ -104,9 +101,8 @@ resource "aws_subnet" "private_a" {
   availability_zone = data.aws_availability_zones.available.names[0]
 
   tags = {
-    Name                                            = "k8s-private-a"
-    "kubernetes.io/role/internal-elb"               = "1"
-    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+    Name                              = "k8s-private-a"
+    "kubernetes.io/role/internal-elb" = "1"
   }
 }
 
@@ -116,9 +112,8 @@ resource "aws_subnet" "private_b" {
   availability_zone = data.aws_availability_zones.available.names[1]
 
   tags = {
-    Name                                            = "k8s-private-b"
-    "kubernetes.io/role/internal-elb"               = "1"
-    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+    Name                              = "k8s-private-b"
+    "kubernetes.io/role/internal-elb" = "1"
   }
 }
 
@@ -128,9 +123,8 @@ resource "aws_subnet" "private_c" {
   availability_zone = data.aws_availability_zones.available.names[2]
 
   tags = {
-    Name                                            = "k8s-private-c"
-    "kubernetes.io/role/internal-elb"               = "1"
-    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+    Name                              = "k8s-private-c"
+    "kubernetes.io/role/internal-elb" = "1"
   }
 }
 

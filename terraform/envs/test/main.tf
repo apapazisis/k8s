@@ -23,8 +23,7 @@ terraform {
 module "network" {
   source = "../../network"
 
-  vpc_cidr_block   = "10.0.0.0/16"
-  eks_cluster_name = "eks-cluster"
+  vpc_cidr_block = "10.0.0.0/16"
 }
 
 module "cluster" {
