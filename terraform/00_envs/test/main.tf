@@ -38,7 +38,7 @@ module "cluster" {
 }
 
 module "k8s_services" {
-  source = "../../k8s-services"
+  source = "../../03_k8s_services"
 
   cluster_name                       = module.cluster.cluster_name
   vpc_id                             = module.network.vpc_id
