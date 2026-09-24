@@ -22,10 +22,6 @@ data "aws_eks_addon_version" "eks_pod_identity_agent" {
   most_recent        = true
 }
 
-data "aws_iam_openid_connect_provider" "eks" {
-  url = aws_eks_cluster.main.identity[0].oidc[0].issuer
-}
-
 
 # resource "aws_eks_identity_provider_config" "example" {
 #   cluster_name = aws_eks_cluster.example.name
