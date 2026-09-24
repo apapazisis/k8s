@@ -37,13 +37,13 @@ module "cluster" {
   ]
 }
 
-# module "k8s_services" {
-#   source = "../../k8s-services"
+module "k8s_services" {
+  source = "../../k8s-services"
 
-#   cluster_name                       = module.cluster.cluster_name
-#   vpc_id                             = module.network.vpc_id
-#   cluster_oidc_url                   = module.cluster.cluster_oidc_url
-#   cluster_oidc_arn                   = module.cluster.cluster_oidc_arn
-#   cluster_endpoint                   = module.cluster.cluster_endpoint
-#   cluster_certificate_authority_data = module.cluster.cluster_certificate_authority_data
-# }
+  cluster_name                       = module.cluster.cluster_name
+  vpc_id                             = module.network.vpc_id
+  cluster_oidc_url                   = module.cluster.cluster_oidc_url
+  cluster_oidc_arn                   = module.cluster.cluster_oidc_arn
+  cluster_endpoint                   = module.cluster.cluster_endpoint
+  cluster_certificate_authority_data = module.cluster.cluster_certificate_authority_data
+}
