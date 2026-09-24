@@ -25,3 +25,7 @@ data "aws_eks_addon_version" "eks_pod_identity_agent" {
 data "aws_iam_roles" "sso_admin_search" {
   name_regex = "AWSReservedSSO_AWSAdministratorAccess_.*"
 }
+
+data "aws_iam_role" "github_actions" {
+  name = "GitHubActionsIAMRole"
+}

@@ -29,12 +29,6 @@ resource "aws_eks_access_policy_association" "sso_admin_assoc_admin" {
   depends_on = [aws_eks_access_entry.sso_admin_entry]
 }
 
-####
-
-data "aws_iam_role" "github_actions" {
-  name = "GitHubActionsIAMRole"
-}
-
 resource "aws_eks_access_entry" "github_actions" {
   cluster_name  = aws_eks_cluster.main.name
   principal_arn = data.aws_iam_role.github_actions.arn
