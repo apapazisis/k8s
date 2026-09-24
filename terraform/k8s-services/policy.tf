@@ -1,4 +1,4 @@
-resource "aws_iam_policy" "policy" {
+resource "aws_iam_policy" "load_balancer_controller_policy" {
   name        = "test_policy"
   description = "My test policy"
 

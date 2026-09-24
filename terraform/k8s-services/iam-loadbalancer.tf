@@ -21,12 +21,7 @@ resource "aws_iam_role" "alb_controller" {
   })
 }
 
-resource "aws_iam_policy" "alb_controller" {
-  name   = "${var.cluster_name}-AWSLoadBalancerControllerIAMPolicy"
-  policy = data.http.alb_controller_policy.response_body
-}
-
 resource "aws_iam_role_policy_attachment" "alb_controller" {
   role       = aws_iam_role.alb_controller.name
-  policy_arn = aws_iam_policy.alb_controller.arn
+  policy_arn = aws_iam_policy.load_balancer_controller_policy.arn
 }
