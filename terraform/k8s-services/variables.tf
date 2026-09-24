@@ -17,3 +17,13 @@ variable "cluster_oidc_arn" {
   description = "The ARN of the OIDC provider for the EKS cluster."
   type        = string
 }
+
+variable "cluster_endpoint" {
+  description = "The endpoint of the EKS cluster."
+  type        = string
+}
+
+variable "cluster_certificate_authority_data" {
+  description = "The certificate authority data for the EKS cluster."
+  type        = string
+}

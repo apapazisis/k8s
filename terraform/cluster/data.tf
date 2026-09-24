@@ -32,3 +32,7 @@ data "aws_eks_addon_version" "eks_pod_identity_agent" {
 #     issuer_url                    = "your issuer_url"
 #   }
 # }
+
+data "aws_iam_roles" "sso_admin_search" {
+  name_regex = "AWSReservedSSO_AWSAdministratorAccess_.*"
+}

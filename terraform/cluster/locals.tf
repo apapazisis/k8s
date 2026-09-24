@@ -12,5 +12,5 @@ locals {
     }
   }
 
- # sso_role_arn = tolist(data.aws_iam_roles.sso_admin_search.arns)[0]
+  sso_role_arn = tolist(data.aws_iam_roles.sso_admin_search.arns)[0]
 }
