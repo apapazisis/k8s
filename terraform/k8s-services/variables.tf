@@ -12,3 +12,8 @@ variable "cluster_oidc_endpoint" {
   description = "The OIDC endpoint of the EKS cluster."
   type        = string
 }
+
+variable "cluster_oidc_arn" {
+  description = "The ARN of the OIDC provider for the EKS cluster."
+  type        = string
+}

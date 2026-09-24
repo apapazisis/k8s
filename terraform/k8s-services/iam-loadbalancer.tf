@@ -7,7 +7,7 @@ resource "aws_iam_role" "alb_controller" {
       {
         Effect = "Allow"
         Principal = {
-          Federated = data.aws_iam_openid_connect_provider.eks.arn
+          Federated = var.cluster_oidc_arn
         }
         Action = "sts:AssumeRoleWithWebIdentity"
         Condition = {

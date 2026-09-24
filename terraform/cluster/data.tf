@@ -21,3 +21,7 @@ data "aws_eks_addon_version" "eks_pod_identity_agent" {
   kubernetes_version = aws_eks_cluster.main.version
   most_recent        = true
 }
+
+data "aws_iam_openid_connect_provider" "eks" {
+  url = aws_eks_cluster.cluster.identity[0].oidc[0].issuer
+}
