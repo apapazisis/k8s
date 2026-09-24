@@ -22,17 +22,6 @@ data "aws_eks_addon_version" "eks_pod_identity_agent" {
   most_recent        = true
 }
 
-
-# resource "aws_eks_identity_provider_config" "example" {
-#   cluster_name = aws_eks_cluster.example.name
-
-#   oidc {
-#     client_id                     = "your client_id"
-#     identity_provider_config_name = "example"
-#     issuer_url                    = "your issuer_url"
-#   }
-# }
-
 data "aws_iam_roles" "sso_admin_search" {
   name_regex = "AWSReservedSSO_AWSAdministratorAccess_.*"
 }
