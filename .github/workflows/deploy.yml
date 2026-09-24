@@ -51,7 +51,7 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan -input=false -no-color -out=tfplan
+        run: terraform plan -out=tfplan
 
       - name: Upload plan artifact
         if: ${{ inputs.action == 'apply' }}
