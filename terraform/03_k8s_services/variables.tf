@@ -8,8 +8,8 @@ variable "cluster_name" {
   type        = string
 }
 
-variable "cluster_oidc_endpoint" {
-  description = "The OIDC endpoint of the EKS cluster."
+variable "cluster_oidc_url" {
+  description = "The OIDC URL of the EKS cluster."
   type        = string
 }
 
