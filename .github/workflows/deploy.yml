@@ -50,6 +50,9 @@ jobs:
       - name: Terraform Validate
         run: terraform validate
 
+      - name: Terraform state list
+        run: terraform state list || echo "No resources in state"
+
       - name: Terraform Plan
         run: terraform plan -input=false -no-color -out=tfplan
 
