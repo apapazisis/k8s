@@ -40,5 +40,4 @@ module "k8s_services" {
   cluster_name          = module.cluster.cluster_name
   vpc_id                = module.network.vpc_id
   cluster_oidc_endpoint = module.cluster.cluster_oidc_endpoint
-  cluster_oidc_arn      = module.cluster.cluster_oidc_arn
 }
