@@ -5,3 +5,7 @@ output "cluster_name" {
 output "cluster_oidc_endpoint" {
   value = aws_eks_cluster.main.identity[0].oidc[0].issuer
 }
+
+output "cluster_oidc_arn" {
+  value = aws_eks_cluster.main.identity[0].oidc[0].arn
+}
