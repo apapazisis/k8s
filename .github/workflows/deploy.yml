@@ -93,4 +93,4 @@ jobs:
           path: ${{ env.TF_WORKING_DIR }}
 
       - name: Terraform Apply
-        run: terraform apply -input=false -no-color tfplan
+        run: terraform apply -input=false tfplan
