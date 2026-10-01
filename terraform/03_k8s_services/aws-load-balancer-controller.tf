@@ -4,7 +4,6 @@ resource "helm_release" "aws_load_balancer_controller" {
   chart            = "aws-load-balancer-controller"
   version          = "3.4.2"
   namespace        = "kube-system"
-  create_namespace = true
 
   set = [
     { name = "clusterName", value = var.cluster_name },
