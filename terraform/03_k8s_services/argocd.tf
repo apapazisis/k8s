@@ -1,6 +1,6 @@
 resource "kubernetes_namespace_v1" "argocd" {
   metadata {
-    name = "argocd"
+    name = local.argocd_namespace
   }
 }
 
@@ -9,7 +9,7 @@ resource "helm_release" "argocd" {
   repository = "https://argoproj.github.io/argo-helm"
   chart      = "argo-cd"
   version    = "10.9.6"
-  namespace  = "argocd"
+  namespace  = local.argocd_namespace
 
   set = [
     { name = "server.service.type", value = "ClusterIP" },
