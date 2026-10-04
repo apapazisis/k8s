@@ -8,7 +8,7 @@ resource "helm_release" "external_dns" {
   set = [
     { name = "provider.name", value = "aws" },
     { name = "aws.region", value = "eu-central-1" },
-    { name = "extraArgs.zone-id-filter", value = data.aws_route53_zone.main.zone_id },
+    { name = "extraArgs.zone-id-filter", value = "Z03240932537UMWGPPFDQ" },
     { name = "policy", value = "sync" },
     { name = "sources[0]", value = "ingress" },
     { name = "serviceAccount.create", value = "true" },
