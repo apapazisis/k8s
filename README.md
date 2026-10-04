@@ -7,3 +7,5 @@
 In the **permissions.tf** we need to add permissions also for the GitHubActionsIAMRole which is assumed to deploy using github actions. It is needed to allow the **helm_release** to access the cluster, read the deployed infrastructure and compare it with the state.
 
 ## Day 2
+Route53 Hosted Zone should be created in a seperate repository or be created in the network module.
+The reason for this is because we need to use the Route53 Hosten Zone in both repositories(k8s, aws-eks-app).
