@@ -15,4 +15,6 @@ resource "helm_release" "argocd" {
     { name = "server.service.type", value = "ClusterIP" },
     { name = "configs.params.server\\.insecure", value = "true" }
   ]
+
+  depends_on = [kubernetes_namespace_v1.argocd]
 }
