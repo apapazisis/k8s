@@ -27,3 +27,8 @@ variable "cluster_certificate_authority_data" {
   description = "The certificate authority data for the EKS cluster."
   type        = string
 }
+
+variable "route53_zone_id" {
+  description = "The ID of the Route 53 hosted zone."
+  type        = string
+}

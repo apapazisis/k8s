@@ -30,7 +30,7 @@ resource "aws_iam_policy" "external_dns" {
       {
         Effect   = "Allow"
         Action   = ["route53:ChangeResourceRecordSets"]
-        Resource = ["arn:aws:route53:::hostedzone/Z03240932537UMWGPPFDQ"] # We have to manage the Route53 DNS in separate account, so we need to specify the hosted zone ARN here repository
+        Resource = ["arn:aws:route53:::hostedzone/${var.route53_zone_id}"] 
       },
       {
         Effect = "Allow"

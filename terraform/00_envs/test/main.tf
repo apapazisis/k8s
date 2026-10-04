@@ -50,4 +50,5 @@ module "k8s_services" {
   cluster_oidc_arn                   = module.cluster.cluster_oidc_arn
   cluster_endpoint                   = module.cluster.cluster_endpoint
   cluster_certificate_authority_data = module.cluster.cluster_certificate_authority_data
+  route53_zone_id                    = module.network.route53_zone_id
 }
