@@ -3,6 +3,7 @@ resource "helm_release" "external_secrets" {
   repository       = "https://charts.external-secrets.io"
   chart            = "external-secrets"
   version          = "2.8.0"
+  namespace        = "kube-system"
 
   set = [
     { name = "serviceAccount.create", value = "true" },

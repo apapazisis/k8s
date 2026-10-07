@@ -7,13 +7,13 @@ resource "aws_iam_role" "external_secrets" {
       {
         Effect = "Allow"
         Principal = {
-          Federated = var.cluster_oidc_url
+          Federated = var.cluster_oidc_arn
         }
         Action = "sts:AssumeRoleWithWebIdentity"
         Condition = {
           StringEquals = {
-            "${replace(var.cluster_oidc_url.eks.url, "https://", "")}:sub" = "system:serviceaccount:kube-system:external-secrets",
-            "${replace(var.cluster_oidc_url.eks.url, "https://", "")}:aud" = "sts.amazonaws.com"
+            "${replace(var.cluster_oidc_url, "https://", "")}:sub" = "system:serviceaccount:kube-system:external-secrets",
+            "${replace(var.cluster_oidc_url, "https://", "")}:aud" = "sts.amazonaws.com"
           }
         }
       }
