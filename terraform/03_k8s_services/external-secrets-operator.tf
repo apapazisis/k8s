@@ -2,7 +2,7 @@ resource "helm_release" "external_secrets" {
   name             = "external-secrets-operator"
   repository       = "https://charts.external-secrets.io"
   chart            = "external-secrets"
-  version          = "2.6.0"
+  version          = "2.8.0"
 
   set = [
     { name = "serviceAccount.create", value = "true" },
